@@ -34,11 +34,11 @@ Cả hai ứng dụng Lặp (Iterative) và Tương tác (Interactive) đều y�
 Các loại RDD:
  - RDD of Strings
  - RDD of Pairs
-<p align = "center"> <img src = https://i.stack.imgur.com/3QiV8.png>
+<p align = "center"> <img src = https://mallikarjuna_g.gitbooks.io/spark/content/diagrams/spark-rdds.png>
 
 ### Các transformation và action với RDD:
 RDD cung cấp các transformation và action hoạt động giống như DataFrame lẫn DataSets. Transformation xử lý các thao tác lazily và Action xử lý thao tác cần xử lý tức thời.
-<p align = "center"> <img src = https://laptrinh.vn/uploads/images/gallery/2019-10/spark-transformation-action.png>
+<p align = "center"> <img src = https://i.stack.imgur.com/3QiV8.png>
  
 Một số transformation: Nhiều phiên bản transformation của RDD có thể hoạt động trên các Structured API, transformation xử lý lazily, tức là chỉ giúp dựng execution plans, dữ liệu chỉ được truy xuất thực sự khi thực hiện action.
  - distinct: loại bỏ trùng lắp trong RDD.
