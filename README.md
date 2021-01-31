@@ -7,6 +7,7 @@ Spark có các đặc trưng sau:
 
 Các thành phần của Spark:
 <p align = "center"> <img src = https://cdn.noron.vn/2018/10/17/445a8489bc7387575b3ea580a127e458.png?w=600>
+ 
  - Spark Core: Spark Core là thành phần cốt lõi thực thi cho tác vụ cơ bản làm nền tảng cho các chức năng khác. Nó cung cấp khả năng tính toán trên bộ nhớ và datase trong bộ nhớ hệ thống lưu trữ ngoài.
  - Spark SQL: Là một thành phần nằm trên Spark Core nó cung cấp một sự ảo hóa mới cho dữ liệu là SchemaRDD, hỗ trợ các dữ liệu có cấu trúc và bán cấu trúc. • Spark Streaming: Cho phép thực hiện phân tích xử lý trực tuyến xử lý theo lô.
  - MLlib (Machine Learning Library): MLlib là một nền tảng học máy phân tán bên trên Spark do kiến trúc phân tán dựa trên bộ nhớ. Theo các so sánh benchmark Spark MLlib nhanh hơn chín lần so với phiên bản chạy trên Hadoop (Apache Mahout).
