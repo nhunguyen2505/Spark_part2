@@ -24,13 +24,12 @@ Có hai cách để tạo RDDs:
  - Lấy từ dataset hệ thống lưu trữ bên ngoài như HDFS, Hbase hoặc các cơ sở dữ liệu quan hệ.
 ### Thực thi trên Map-Reduce
 MapReduce được áp dụng rộng rãi để xử lý và tạo các bộ dữ liệu lớn với thuật toán xử lý phân tán song song trên một cụm. Nó cho phép người dùng viết các tính toán song song, sử dụng một tập hợp các toán tử cấp cao, mà không phải lo lắng về xử lý công việc và khả năng chịu lỗi.
-
+<p align = "center"> <img src = https://static.packt-cdn.com/products/9781785280849/graphics/5536cf53-3947-434f-ae2f-3a1338e2dbab.png>
 Cả hai ứng dụng Lặp (Iterative) và Tương tác (Interactive) đều yêu cầu chia sẻ truy cập và xử lý dữ liệu nhanh hơn trên các công việc song song. Chia sẻ dữ liệu chậm trong Map-Reduce do sao chép tuần tự và tốc độ I/O của ổ đĩa. Về hệ thống lưu trữ, hầu hết các ứng dụng Hadoop, cần dành hơn 90% thời gian để thực hiện các thao tác đọc-ghi HDFS.
 
-Iterative Operation trên MapReduce:
+### Thực thi trên Spark RDD
+Để khắc phục được vấn đề về MapRedure, các nhà nghiên cứu đã phát triển một framework chuyên biệt gọi là Apache Spark. Ý tưởng chính của Spark là Resilient Distributed Datasets (RDD); nó hỗ trợ tính toán xử lý trong bộ nhớ. Điều này có nghĩa, nó lưu trữ trạng thái của bộ nhớ dưới dạng một đối tượng trên các công việc và đối tượng có thể chia sẻ giữa các công việc đó. Việc xử lý dữ liệu trong bộ nhớ nhanh hơn 10 đến 100 lần so với network và disk.
 
-<p align = "center"> <img src = https://laptrinh.vn/uploads/images/gallery/2019-10/scaled-1680-/interactive_operations_on_mapreduce.jpg>
- 
-Interactive Operations trên MapReduce:
-
-<p align = "center"> <img src = https://laptrinh.vn/uploads/images/gallery/2019-10/scaled-1680-/interactive_operations_on_mapreduce.jpg>
+Các loại RDD:
+ - RDD of Strings
+ - RDD ò Pairs
