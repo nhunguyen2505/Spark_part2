@@ -29,7 +29,7 @@ Cả hai ứng dụng Lặp (Iterative) và Tương tác (Interactive) đều y�
 
 Iterative Operation trên MapReduce:
 
-<p align = "center"><img src=laptrinh.vn/uploads/images/gallery/2019-10/scaled-1680-/iterative_operations_on_mapreduce.jpg>
+<p align = "center"><img src=https://laptrinh.vn/uploads/images/gallery/2019-10/scaled-1680-/interactive_operations_on_mapreduce.jpg>
  
 Interactive Operations trên MapReduce:
 
