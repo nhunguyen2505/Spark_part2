@@ -25,6 +25,7 @@ Có hai cách để tạo RDDs:
 ### Thực thi trên Map-Reduce
 MapReduce được áp dụng rộng rãi để xử lý và tạo các bộ dữ liệu lớn với thuật toán xử lý phân tán song song trên một cụm. Nó cho phép người dùng viết các tính toán song song, sử dụng một tập hợp các toán tử cấp cao, mà không phải lo lắng về xử lý công việc và khả năng chịu lỗi.
 <p align = "center"> <img src = https://static.packt-cdn.com/products/9781785280849/graphics/5536cf53-3947-434f-ae2f-3a1338e2dbab.png>
+
 Cả hai ứng dụng Lặp (Iterative) và Tương tác (Interactive) đều yêu cầu chia sẻ truy cập và xử lý dữ liệu nhanh hơn trên các công việc song song. Chia sẻ dữ liệu chậm trong Map-Reduce do sao chép tuần tự và tốc độ I/O của ổ đĩa. Về hệ thống lưu trữ, hầu hết các ứng dụng Hadoop, cần dành hơn 90% thời gian để thực hiện các thao tác đọc-ghi HDFS.
 
 ### Thực thi trên Spark RDD
@@ -32,4 +33,29 @@ Cả hai ứng dụng Lặp (Iterative) và Tương tác (Interactive) đều y�
 
 Các loại RDD:
  - RDD of Strings
- - RDD ò Pairs
+ - RDD of Pairs
+<p align = "center"> <img src = https://mallikarjuna_g.gitbooks.io/spark/content/diagrams/spark-rdds.png>
+
+### Các transformation và action với RDD:
+RDD cung cấp các transformation và action hoạt động giống như DataFrame lẫn DataSets. Transformation xử lý các thao tác lazily và Action xử lý thao tác cần xử lý tức thời.
+<p align = "center"> <img src = https://laptrinh.vn/uploads/images/gallery/2019-10/spark-transformation-action.png>
+ 
+Một số transformation: Nhiều phiên bản transformation của RDD có thể hoạt động trên các Structured API, transformation xử lý lazily, tức là chỉ giúp dựng execution plans, dữ liệu chỉ được truy xuất thực sự khi thực hiện action.
+ - distinct: loại bỏ trùng lắp trong RDD.
+ - filter: tương đương với việc sử dụng where trong SQL, tìm các record trong RDD xem những phần tử nào thỏa điều kiện. Có thể cung cấp một hàm phức tạp sử dụng để filter các record cần thiết. Như trong Python, ta có thể sử dụng hàm lambda để truyền vào filter.
+ - map: thực hiện một công việc nào đó trên toàn bộ RDD. Trong Python sử dụng lambda với từng phần tử để truyền vào map.
+ - flatMap: cung cấp một hàm đơn giản hơn hàm map. Yêu cầu output của map phải là một structure có thể lặp và mở rộng được.
+ - sortBy: mô tả một hàm để trích xuất dữ liệu từ các object của RDD và thực hiện sort được từ đó.
+ - randomSplit: nhận một mảng trọng số và tạo một random seed, tách các RDD thành một mảng các RDD có số lượng chia theo trọng số.
+Một số action: Action thực thi ngay các transformation đã được thiết lập để thu thập dữ liệu về driver để xử lý hoặc ghi dữ liệu xuống các công cụ lưu trữ.
+ - reduce: thực hiện hàm reduce trên RDD để thu về 1 giá trị duy nhất.
+ - count: đếm số dòng trong RDD.
+ - countApprox: phiên bản đếm xấp xỉ của count, nhưng phải cung cấp timeout vì có thể không nhận được kết quả.
+ - countByValue: đếm số giá trị của RDD, chỉ sử dụng nếu map kết quả nhỏ vì tất cả dữ liệu sẽ được load lên memory của driver để tính toán, chỉ nên sử dụng trong tình huống số dòng nhỏ và số lượng item khác nhau cũng nhỏ.
+ - countApproxDistinct: đếm xấp xỉ các giá trị khác nhau.
+ - countByValueApprox: đếm xấp xỉ các giá trị.
+ - first: lấy giá trị đầu tiên của dataset.
+ - max và min: lần lượt lấy giá trị lớn nhất và nhỏ nhất của dataset.
+ - take và các method tương tự: lấy một lượng giá trị từ trong RDD, take sẽ trước hết scan qua một partition và sử dụng kết quả để dự đoán số lượng partition cần phải lấy thêm để thỏa mãn số lượng lấy.
+ - top và takeOrdered: top sẽ hiệu quả hơn takeOrdered vì top lấy các giá trị đầu tiên được sắp xếp ngầm trong RDD.
+ - takeSamples: lấy một lượng giá trị ngẫu nhiên trong RDD.
