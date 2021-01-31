@@ -87,5 +87,6 @@ Hoạt động DataFrame:
 
 ## Nguồn
 https://www.tutorialspoint.com/apache_spark/apache_spark_rdd.htm
+
 https://www.facebook.com/notes/c%E1%BB%99ng-%C4%91%E1%BB%93ng-big-data-vi%E1%BB%87t-nam/apache-spark-fundamentals-ph%E1%BA%A7n-2-spark-core-v%C3%A0-rdd/514714606074061/
 
