@@ -34,7 +34,7 @@ Cả hai ứng dụng Lặp (Iterative) và Tương tác (Interactive) đều y�
 Các loại RDD:
  - RDD of Strings
  - RDD of Pairs
-<p align = "center"> <img src = https://mallikarjuna_g.gitbooks.io/spark/content/diagrams/spark-rdds.png>
+<p align = "center"> <img src = https://i.stack.imgur.com/3QiV8.png>
 
 ### Các transformation và action với RDD:
 RDD cung cấp các transformation và action hoạt động giống như DataFrame lẫn DataSets. Transformation xử lý các thao tác lazily và Action xử lý thao tác cần xử lý tức thời.
@@ -59,3 +59,8 @@ Một số action: Action thực thi ngay các transformation đã được thi�
  - take và các method tương tự: lấy một lượng giá trị từ trong RDD, take sẽ trước hết scan qua một partition và sử dụng kết quả để dự đoán số lượng partition cần phải lấy thêm để thỏa mãn số lượng lấy.
  - top và takeOrdered: top sẽ hiệu quả hơn takeOrdered vì top lấy các giá trị đầu tiên được sắp xếp ngầm trong RDD.
  - takeSamples: lấy một lượng giá trị ngẫu nhiên trong RDD.
+
+
+
+## Nguồn
+https://www.tutorialspoint.com/apache_spark/apache_spark_rdd.htm
