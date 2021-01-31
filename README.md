@@ -90,3 +90,5 @@ https://www.tutorialspoint.com/apache_spark/apache_spark_rdd.htm
 
 https://www.facebook.com/notes/c%E1%BB%99ng-%C4%91%E1%BB%93ng-big-data-vi%E1%BB%87t-nam/apache-spark-fundamentals-ph%E1%BA%A7n-2-spark-core-v%C3%A0-rdd/514714606074061/
 
+https://www.tutorialspoint.com/spark_sql/spark_sql_dataframes.htm?utm_source=7_&utm_medium=affiliate&utm_content=5f34cd37cdf1050001b09537&utm_campaign=Admitad&utm_term=c28cdbfcfa6e3acb8828a6c1a16d3dff
+
