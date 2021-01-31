@@ -65,14 +65,25 @@ Một số action: Action thực thi ngay các transformation đã được thi�
 ### Khái niệm
 DataFrame là một kiểu dữ liệu collection phân tán, được tổ chức thành các cột được đặt tên. Về mặt khái niệm, nó tương đương với các bảng quan hệ (relational tables) đi kèm với các kỹ thuật tối ưu tính toán.
 
+<p align = "center"> <img src = https://cdn.helpex.vn/upload/2019/2/19/ar/01-50-19-042-625b5d61-0e62-4f67-81b9-693d9937ea94.jpg>
+
 DataFrame có thể được xây dựng từ nhiều nguồn dữ liệu khác nhau như Hive table, các file dữ liệu có cấu trúc hay bán cấu trúc (csv, json), các hệ cơ sở dữ liệu phổ biến (MySQL, MongoDB, Cassandra), hoặc RDDs hiện hành. API này được thiết kế cho các ứng dụng Big Data và Data Science hiện đại.
 
 ### Các tính năng của DataFrame
-Khả năng xử lý dữ liệu có kích thước từ Kilobyte đến Petabyte trên một cụm nút đơn đến cụm lớn.
-Hỗ trợ các định dạng dữ liệu khác nhau (Avro, csv, tìm kiếm đàn hồi và Cassandra) và hệ thống lưu trữ (HDFS, bảng HIVE, mysql, v.v.).
-Tối ưu hóa hiện đại và tạo mã thông qua trình tối ưu hóa Spark SQL Catalyst (khung chuyển đổi cây).
-Có thể dễ dàng tích hợp với tất cả các công cụ và khuôn khổ Dữ liệu lớn thông qua Spark-Core.
-Cung cấp API cho Lập trình Python, Java, Scala và R.
+DataFrame có một số tính năng sau:
+ - Khả năng xử lý dữ liệu có kích thước từ Kilobyte đến Petabyte trên một cụm nút đơn đến cụm lớn.
+ - Hỗ trợ các định dạng dữ liệu khác nhau (Avro, csv, tìm kiếm đàn hồi và Cassandra) và hệ thống lưu trữ (HDFS, bảng HIVE, mysql, v.v.).
+ - Tối ưu hóa hiện đại và tạo mã thông qua trình tối ưu hóa Spark SQL Catalyst (khung chuyển đổi cây).
+ - Có thể dễ dàng tích hợp với tất cả các công cụ và khuôn khổ Dữ liệu lớn thông qua Spark-Core.
+ - Cung cấp API cho Lập trình Python, Java, Scala và R.
+
+SQLContext:
+ - SQLContext là một lớp và được sử dụng để khởi tạo các chức năng của Spark SQL. Đối tượng lớp SparkContext (sc) là bắt buộc để khởi tạo đối tượng lớp SQLContext.
+
+Hoạt động DataFrame:
+ - DataFrame cung cấp một ngôn ngữ dành riêng cho miền để thao tác dữ liệu có cấu trúc. Ở đây, chúng tôi bao gồm một số ví dụ cơ bản về xử lý dữ liệu có cấu trúc bằng DataFrames.
+ 
+
 
 ## Nguồn
 https://www.tutorialspoint.com/apache_spark/apache_spark_rdd.htm
